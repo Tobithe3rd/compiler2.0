@@ -1,0 +1,8 @@
+from backend.code_generator import CodeGenerator
+
+optimized_ir = ['CONST 8', 'CONST 8', 'CONST 5', 'ADD 8 8', 'DIV 5 2']
+code_generator = CodeGenerator()
+asm_code = code_generator.generate(optimized_ir)
+
+for line in asm_code:
+    print(line)
